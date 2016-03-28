@@ -1,0 +1,27 @@
+{
+  "name": "Peter1994",
+  "version": "0.0.0",
+  "description": "blog in progress",
+  "main": "server.js",
+  "author": "Peter Coleman",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-beta.12",
+    "body-parser": "^1.15.0",
+    "bootstrap": "^3.3.6",
+    "cookie-parser": "^1.4.1",
+    "es6-shim": "^0.35.0",
+    "express": "^4.13.4",
+    "google-closure-compiler": "^20160315.0.0",
+    "less": "^2.6.1",
+    "mongodb": "^2.1.11",
+    "morgan": "^1.7.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "serve-favicon": "^2.3.0",
+    "traceur": "0.0.105",
+    "zone.js": "0.6.6"
+  }
+}
