@@ -21,11 +21,8 @@ app.use(bodyParser.json());                                     // parse applica
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(methodOverride());
 
-///////   Mongoose Models   ///////
-var todoModels = require('./server/Models/todoModel.js');
-
 ///////   Routes   ///////
-var todo = require('./routes/todoRoutes.js');
+var todo = require('./app/routes/todoRoutes.js');
 app.use('/', todo);
 
 /////// Listen Start app with node server.js   ///////

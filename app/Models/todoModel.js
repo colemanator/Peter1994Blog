@@ -9,4 +9,4 @@ var Todo = mongoose.model('Todo', {
     text : String
 });
 
-exports.Todo = Todo;
+module.exports = mongoose.model('Todo', Todo);
