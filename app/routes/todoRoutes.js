@@ -3,7 +3,7 @@
  */
 
 var express = require('express');
-var Todo = require('../server/Models/todoModel.js');
+var Todo = require('/app/Models/todoModel.js');
 var router = express.Router();
 
 // api ---------------------------------------------------------------------
