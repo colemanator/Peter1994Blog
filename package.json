@@ -1,27 +1,37 @@
 {
-  "name": "Peter1994",
-  "version": "0.0.0",
-  "description": "blog in progress",
+  "name": "peter1994",
+  "version": "0.0.1",
+  "description": "Simple todo application.",
   "main": "server.js",
-  "author": "Peter Coleman",
+  "author": "Scotch",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node server.js"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.12",
+    "angular2": "^2.0.0-beta.13",
     "body-parser": "^1.15.0",
     "bootstrap": "^3.3.6",
-    "cookie-parser": "^1.4.1",
     "es6-shim": "^0.35.0",
     "express": "^4.13.4",
-    "google-closure-compiler": "^20160315.0.0",
     "less": "^2.6.1",
-    "mongodb": "^2.1.11",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.4.10",
     "morgan": "^1.7.0",
-    "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.2",
-    "serve-favicon": "^2.3.0",
-    "traceur": "0.0.105",
-    "zone.js": "0.6.6"
-  }
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.2",
+    "zone.js": "^0.6.8"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colemanator/Peter1994Blog.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/colemanator/Peter1994Blog/issues"
+  },
+  "homepage": "https://github.com/colemanator/Peter1994Blog#readme"
 }
