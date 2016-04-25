@@ -2,7 +2,7 @@
  * Created by Peter on 25/04/2016.
  */
 
-var scotchTodo = angular.module('scotchTodo', []);
+var scotchTodo = angular2.module('scotchTodo', []);
 
 function mainController($scope, $http) {
     $scope.formData = {};

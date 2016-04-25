@@ -5,8 +5,7 @@
   "main": "server.js",
   "author": "Scotch",
   "scripts": {
-    "start": "node server.js",
-    "build": "traceur --dir ./public/js/controllers ./public/transpiled"
+    "start": "node server.js"
   },
   "dependencies": {
     "angular2": "^2.0.0-beta.13",
@@ -14,18 +13,20 @@
     "bootstrap": "^3.3.6",
     "es6-shim": "^0.35.0",
     "express": "^4.13.4",
-    "google-closure-compiler": "^20160315.2.0",
     "gulp": "^3.9.1",
-    "less": "^2.6.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-less": "^3.0.5",
+    "gulp-uglify": "^1.5.3",
     "method-override": "^2.3.5",
     "mongoose": "^4.4.10",
     "morgan": "^1.7.0",
     "reflect-metadata": "^0.1.2",
     "rxjs": "^5.0.0-beta.2",
-    "traceur": "0.0.108",
     "zone.js": "^0.6.8"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-babel": "^6.1.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/colemanator/Peter1994Blog.git"
