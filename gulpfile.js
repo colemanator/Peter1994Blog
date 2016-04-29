@@ -24,4 +24,9 @@ gulp.task("less", function () {
         .pipe(gulp.dest('./public/dist/css'));
 });
 
-gulp.task('default', ['javascript','less']);
+gulp.task('watch', function() {
+    gulp.watch('./public/js/controllers/**/*.js', ['javascript']);
+    gulp.watch('./public/less/**/*.less', ['less']);
+});
+
+gulp.task('default', ['javascript','less','watch']);

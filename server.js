@@ -6,20 +6,29 @@
 ///////   Set up   ///////
 var express  = require('express');
 var app      = express();
+var compression = require('compression');
 var mongoose = require('mongoose');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var prerender = require('prerender-node');
+
+var oneDay = 86400000;
 
 ///////   Configuration    ///////
-mongoose.connect('mongodb://localhost:27017');     // connect to mongoDB database on modulus.io
 
-app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
-app.use(morgan('dev'));                                         // log every request to the console
-app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
-app.use(bodyParser.json());                                     // parse application/json
-app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
+// connect to mongoDB database 
+mongoose.connect('mongodb://localhost:27017');
+
+
+app.use(compression());
+app.use(express.static(__dirname + '/public', {maxAge: oneDay}));
+app.use(morgan('dev'));
+app.use(bodyParser.urlencoded({'extended':'true'}));            
+app.use(bodyParser.json());                                 
+app.use(bodyParser.json({ type: 'application/vnd.api+json' })); 
 app.use(methodOverride());
+app.use(prerender);
 
 ///////   Routes   ///////
 var todo = require('./app/routes/todoRoutes.js');
