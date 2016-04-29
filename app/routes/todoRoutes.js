@@ -3,8 +3,10 @@
  */
 
 var express = require('express');
-var Todo = require('/Users/Peter/WebstormProjects/Peter1994Blog/app/Models/todoModel.js');
+var Todo = require('../Models/todoModel.js');
+var path = require('path');
 var router = express.Router();
+
 
 // api ---------------------------------------------------------------------
 // get all todos
@@ -59,10 +61,12 @@ router.delete('/api/todos/:todo_id', function(req, res) {
     });
 });
 
+var oneDay = 86400000;
 
 // application -------------------------------------------------------------
-router.get('*', function(req, res) {
-    res.sendfile('./server/views/todoView.html'); // load the single view file (angular will handle the page changes on the front-end)
+router.get('/', function(req, res) {
+    // load the single view file (angular will handle the page changes on the front-end
+    res.sendFile(path.resolve('/views/todoView.html'),{root: './app', maxAge: oneDay});
 });
 
 module.exports = router;

@@ -22,7 +22,6 @@ mongoose.connect('mongodb://localhost:27017');
 
 
 app.use(compression());
-app.use(express.static(__dirname + '/public', {maxAge: oneDay}));
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({'extended':'true'}));            
 app.use(bodyParser.json());                                 
@@ -33,6 +32,7 @@ app.use(prerender);
 ///////   Routes   ///////
 var todo = require('./app/routes/todoRoutes.js');
 app.use('/', todo);
+app.use('/public',express.static(__dirname + '/public', {maxAge: oneDay}));
 
 /////// Listen Start app with node server.js   ///////
 app.listen(8080);
